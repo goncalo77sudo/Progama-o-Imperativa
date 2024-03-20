@@ -281,11 +281,16 @@ int contida (char a[], char b[]) {
 }
 
 //23
-int palindrome (char s[]) {
-    int i, N = 0;
-    for(i = 0; s[i]; i++) N++;
-    for(i = 0; i < N && s[i] == s[N - i - 1]; i++);
-    return i == N;
+int palindrome (char s[]){
+    int start = 0;
+    int end = strlen(s) - 1;
+    for (int i = 0; i < strlen(s)/2; i++)
+    {
+        if(s[start] != s[end]) return 0;
+        start++;
+        end--;
+    }
+    return 1;
 }
 
 //24
