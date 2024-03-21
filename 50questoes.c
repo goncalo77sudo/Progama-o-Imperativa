@@ -106,6 +106,19 @@ char* mystrstr (char haystack[], char needle[]) {
     return NULL;
 }
 
+//11
+ void strrev (char s[]){
+    int start = 0;
+    int end = strlen(s) - 1;
+    for(int i = 0; i < strlen(s) / 2; i++){
+        char temp = s[start];
+        s[start] = s[end];
+        s[end] = temp;
+        start++;
+        end--;
+    }
+ }
+
 //12
 void tail(char* s, int N) {
     int i;
